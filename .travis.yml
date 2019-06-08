@@ -1,10 +1,8 @@
-language: node_js
-
 sudo: required
 services: 
   - docker
 before_install:
 # Il tag dell'immagine e' usato solo dentro travis
   - docker build -t pancix/docker-react -f Dockerfile.dev .
-scripts: 
+script: 
   - docker run pancix/docker-react npm run test -- --coverage
