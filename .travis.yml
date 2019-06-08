@@ -5,4 +5,4 @@ before_install:
 # Il tag dell'immagine e' usato solo dentro travis
   - docker build -t pancix/docker-react -f Dockerfile.dev .
 script: 
-  - docker run pancix/docker-react npm run test -- --coverage
+  - docker run pancix/docker-react npm run test 
