@@ -13,7 +13,6 @@ deploy:
   app: "udemyL83-docker-react"
   env: "Udemyl83DockerReact-env"
   bucket_name: "elasticbeanstalk-us-east-1-235903008164"
-  # Di defaul l'app name
   bucket_path: "udemyL83-docker-react"
   on:
     branch: master
