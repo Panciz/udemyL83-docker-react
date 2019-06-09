@@ -10,11 +10,11 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "udemyL86-docker-react"
-  env: "udemyl86dockerreact-env"
+  app: "udemyL83-docker-react"
+  env: "Udemyl83DockerReact-env"
   bucket_name: "elasticbeanstalk-us-east-1-235903008164"
   # Di defaul l'app name
-  bucket_path: "udemyL86-docker-react"
+  bucket_path: "udemyL83-docker-react"
   on:
     branch: master
   access_key_id: $ACCESS_KEY
