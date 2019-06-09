@@ -6,3 +6,18 @@ before_install:
   - docker build -t pancix/docker-react -f Dockerfile.dev .
 script: 
   - docker run pancix/docker-react npm run test 
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-18"
+  app: "udemyL86-docker-react"
+  env: "udemyl86dockerreact-env"
+  bucket_name: "elasticbeanstalk-us-east-1-235903008164"
+  # Di defaul l'app name
+  bucket_path: "udemyL86-docker-react"
+  on:
+    branch: master
+  access_key_id: $ACCESS_KEY
+  secure:
+    secret_access_key: "$AWS_SECRET_KEY"
+
