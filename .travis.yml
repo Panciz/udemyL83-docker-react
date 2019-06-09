@@ -9,7 +9,7 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: "us-east-18"
+  region: "us-east-1"
   app: "udemyL86-docker-react"
   env: "udemyl86dockerreact-env"
   bucket_name: "elasticbeanstalk-us-east-1-235903008164"
