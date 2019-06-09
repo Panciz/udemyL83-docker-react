@@ -14,3 +14,5 @@ deploy:
   env: Udemyl83DockerReact-env
   on:
     repo: Panciz/udemyL83-docker-react
+  bucket-name: "elasticbeanstalk-us-east-1-235903008164"
+  bucket-path: udemyL83-docker-react
