@@ -1,24 +1,16 @@
 sudo: required
-services: 
-  - docker
+services:
+- docker
 before_install:
-# Il tag dell'immagine e' usato solo dentro travis
-  - docker build -t pancix/docker-react -f Dockerfile.dev .
-script: 
-  - docker run pancix/docker-react npm run test 
-
+- docker build -t pancix/docker-react -f Dockerfile.dev .
+script:
+- docker run pancix/docker-react npm run test
 deploy:
   provider: elasticbeanstalk
-  access_key_id:
-    secure: $ACCESS_KEY
-  secure:
-    secret_access_key: "$AWS_SECRET_KEY"
-  region: "us-east-1"
-  app: "udemyL83-docker-react"
-  env: "Udemyl83DockerReact-env"
-  bucket_name: "elasticbeanstalk-us-east-1-235903008164"
-  bucket_path: "udemyL83-docker-react"
+  access_key_id: "$ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
+  region: us-east-1
+  app: udemyL83-docker-react
+  env: Udemyl83DockerReact-env
   on:
-    branch: master
-
-
+    repo: Panciz/udemyL83-docker-react
